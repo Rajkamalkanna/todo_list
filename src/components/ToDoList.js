@@ -24,18 +24,18 @@ export default function ToDoList () {
     }
   return (
     <>
-    <div>
-    <div><h1>ToDoList</h1></div>
-    <input type="text" name="text" value = {activity} onChange = {(e) => setActivity(e.target.value) }/>
+    <div className='container'>
+    <div className='header'><h1>ToDoList</h1></div>
+    <input type="text" placeholder='Add Activity' value = {activity} onChange = {(e) => setActivity(e.target.value) }/>
     <button onClick={addActivity}>Add</button>
-    <p>This is your list</p>
+    <p className='List-heading'>This is your list</p>
     
     {listData!== [] && listData.map((data, i) =>{
          return(
             <>
             <p key={i}>
-                <div>{data}</div>
-                <div><button onClick={()=>removeActivity(i)}>remove</button></div>
+                <div className='listData'>{data}</div>
+                <div className='btn-position'><button onClick={()=>removeActivity(i)}>remove</button></div>
             </p>
             
             </>
