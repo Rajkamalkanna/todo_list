@@ -1,11 +1,12 @@
 import React from 'react'
-import ToDoList from './components/ToDoList'
+import ToDo from './components/ToDo'
 import './index.css';
 
 export default function App() {
   return (
     <div>
-      <ToDoList />
+      {/* <ToDoList /> */}
+      <ToDo />
     </div>
   )
 }
